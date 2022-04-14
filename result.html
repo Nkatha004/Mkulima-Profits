@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mkulima Profits</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel = "stylesheet" href = "styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+      button{
+          width: 15%;
+      }
+      body{
+          background: url("broiler.jpg") no-repeat;
+          background-size: cover;
+      }
+      form{
+          background-color: mintcream;
+          padding: 20px;
+      }
+  </style>
+</head>
+<body>
+    <br/><br/>
+    <div class="container">
+        <form class="form-horizontal">
+            <a style = "text-decoration: none;"href = "index.html"><h1 style = "color: #000;" class="center">MKULIMA PROFITS</h1></a>
+          <div class="form-group"><br/><br>
+            <label class="control-label col-sm-2" for="production_cost">Total production cost:</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="production_cost" readonly>
+            </div>
+          </div>
+          <div class="form-group"><br/><br>
+            <label class="control-label col-sm-2" for="sales_cost">Total sales cost:</label>
+            <div class="col-sm-10">          
+              <input required type="number" class="form-control" id="sales_cost" readonly>
+            </div>
+          </div>
+          <div class="form-group"><br/><br>
+            <label class="control-label col-sm-2" for="profit">YOUR PROFIT IS:</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="profit" readonly>
+            </div>
+          </div>
+        </form>
+       
+        <script src = "calculations.js"></script>
+      </div>
+      <br/><br/>
+      <script>
+        var sales_cost = localStorage.getItem("sales_cost");
+        var production_cost = localStorage.getItem("production_cost");
+        var profit = sales_cost - production_cost;
+        
+        document.getElementById('production_cost').value = production_cost;
+        document.getElementById('sales_cost').value = sales_cost;
+        document.getElementById('profit').value = profit;
+        
+    </script> 
+      <div class = "container">
+          <form class="center">
+              <b><p>THANK YOU FOR USING MKULIMA PROFITS.</p>
+              <p>WE SAY ASANTE SANA!</p></b>
+            </form>
+      </div><br>
+      
+      <footer style = "height: 62px;">
+        <p>&#169;2022 Mkulima Profits. All Rights Reserved.</p>
+      </footer>
+    </body>
+</html>
+      
