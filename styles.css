@@ -1,0 +1,23 @@
+.center{
+    text-align: center;
+}
+div img{
+    height: 400px;
+    width: 750px;
+}
+.col{
+    line-height: 3rem;
+    font-size: 15px;
+
+}
+button, footer{
+    background-color: black;
+    color: white;
+}
+footer p{
+    padding: 20px;
+}
+.headings{
+    padding-left: 70px;
+    font-weight: bold;
+}
